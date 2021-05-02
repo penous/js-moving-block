@@ -5,8 +5,18 @@ import { canvas, ctx } from './canvas.js';
 // Create player
 const p = new Player();
 
-// Create enemy
-const e = new Enemy();
+// Create enemy array with starter enemy
+const enemies = [new Enemy()];
+// Create more enemies
+setInterval(() => {
+  const e = new Enemy();
+  enemies.push(e);
+}, Math.floor(Math.random() * 5000 + 1500));
+
+// Delete enemies after a while
+setInterval(() => {
+  enemies.shift();
+}, 8000);
 
 // Eventlisteners
 window.addEventListener('keydown', move);
@@ -20,6 +30,6 @@ const animate = () => {
   requestAnimationFrame(animate);
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   p.draw();
-  e.draw();
+  enemies.forEach((enemy) => enemy.draw());
 };
 animate();
