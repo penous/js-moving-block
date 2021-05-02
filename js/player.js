@@ -24,19 +24,19 @@ export default class Player {
     switch (keyCode) {
       case 68: //d
         if (this.x + this.width >= canvas.width) break;
-        this.x += 10;
+        this.x += 12;
         break;
       case 83: //s
         if (this.y + this.height >= canvas.height) break;
-        this.y += 10;
+        this.y += 12;
         break;
       case 65: //a
         if (this.x <= 0) break;
-        this.x -= 10;
+        this.x -= 12;
         break;
       case 87: //w
         if (this.y <= 0) break;
-        this.y -= 10;
+        this.y -= 12;
         break;
     }
   }
