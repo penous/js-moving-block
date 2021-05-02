@@ -1,5 +1,15 @@
+@font-face {
+  font-family: ninjaruto;
+  src: url(../font/ninjaruto.ttf);
+}
 .container {
   height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: ninjaruto;
+  margin-bottom: 2rem;
 }
 
 #level {
