@@ -12,6 +12,10 @@ h1 {
   margin-bottom: 2rem;
 }
 
+img {
+  margin: 1rem 0;
+}
+
 #level {
   position: relative;
   height: 60vh;

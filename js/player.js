@@ -6,7 +6,7 @@ export default class Player {
     this.y = 0;
     this.height = 50;
     this.width = 50;
-    this.lives = 3;
+    this.lives = 2;
   }
 
   draw() {
