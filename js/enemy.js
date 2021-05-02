@@ -2,8 +2,8 @@ import { canvas, ctx } from './canvas.js';
 
 export default class Enemy {
   constructor() {
-    this.x = 100;
-    this.y = 130;
+    this.x = this.generateSpawn().x;
+    this.y = this.generateSpawn().y;
     this.height = 20;
     this.width = 20;
     this.moveX = this.generateMove();
@@ -18,6 +18,12 @@ export default class Enemy {
 
   generateMove() {
     return Math.floor(Math.random() * 4) - 2;
+  }
+
+  generateSpawn() {
+    const x = Math.floor(Math.random() * (canvas.width - 20)) + 20;
+    const y = Math.floor(Math.random() * (canvas.height - 20)) + 20;
+    return { x, y };
   }
 
   reverse() {
